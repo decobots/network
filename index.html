@@ -10,23 +10,35 @@
 	<script src="http://code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script>
 	<script type="text/javascript" src="phonegap.js"></script>
 	<script type="text/javascript">
+	
+var timer;
+var net;
+
 function init(){
      document.addEventListener("deviceready", onDeviceReady, false);
 }
-function onDeviceReady(){//	alert(navigator.connection.type);
-	document.getElementById("Net_type").innerHTML=navigator.connection.type;
-
+function onDeviceReady(){
+	net=navigator.connection.type;
+	document.getElementById("Net_type").innerHTML=net;
     	document.addEventListener("online", onLine, false);
     	document.addEventListener("offline", offLine, false);
 }
 function onLine(){
+	timer=setInterval("changeNet", 1000);
+	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p1");
 	
-	console.log("on");
+	
 }
 function offLine(){
-	console.log("off");
-	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p3");
+	clearInterval(timer);
+	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p2");
 	
+}
+function changeNet(){
+	if (net!=navigator.connection.type){
+		net=navigator.connection.type;
+		document.getElementById("Net_type").innerHTML=net;
+	}
 }
 </script>        
 </head>
@@ -48,26 +60,10 @@ function offLine(){
 </div><!-- /page -->
 
 <!-- page2==================================================================================================================== -->
-<div data-role="page" data-theme="a" id="p2">
+<div data-role="page" data-theme="b" data-trancition="slide" id="p2">
 
 	<div data-role="header">
-		<h1>Photo</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-        	<p>Your connection was change</p>
-        	<p id="Net_type"></p>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<button id="photoBut">Get photo</button>
-	</div><!-- /footer -->
-</div><!-- /page -->
-<!-- page3==================================================================================================================== -->
-<div data-role="page" data-theme="b" data-trancition="slide" id="p3">
-
-	<div data-role="header">
-		<h1>Photo</h1>
+		<h1>!!!</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -75,7 +71,7 @@ function offLine(){
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<button id="photoBut">Get photo</button>
+	<h1>!!!</h1>
 	</div><!-- /footer -->
 </div><!-- /page -->
 <!-- page1==================================================================================================================== -->
