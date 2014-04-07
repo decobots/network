@@ -26,6 +26,7 @@ function onDeviceReady(){
 function onLine(){
 	timer=setInterval(changeNet, 1000);
 	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p1");
+	navigator.notification.beep(2);
 	
 	
 }
@@ -33,8 +34,6 @@ function offLine(){
 	clearInterval(timer);
 	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p2", {role: "dialog"});
 	navigator.notification.vibrate(100);
-	navigator.notification.vibrate(500);
-	navigator.notification.vibrate(2500);
 	
 }
 function changeNet(){
