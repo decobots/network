@@ -35,11 +35,11 @@ function offLine(){
 	
 }
 function changeNet(){
-	console.log("1");
+	alert("1");
 	if (net!=navigator.connection.type){
-			
+		alert(net);	
 		net=navigator.connection.type;
-		console.log(net);
+		alert(net);
 		document.getElementById("Net_type").innerHTML=net;
 	}
 }
