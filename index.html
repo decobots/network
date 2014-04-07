@@ -31,7 +31,7 @@ function onLine(){
 }
 function offLine(){
 	clearInterval(timer);
-	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p2");
+	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p2", {role: "dialog"});
 	
 }
 function changeNet(){
@@ -51,7 +51,7 @@ function changeNet(){
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-        	<p>Start here</p>
+        	<p>Подключенно к сети:</p>
         	<p id="Net_type"></p>
 	</div><!-- /content -->
 
@@ -60,14 +60,14 @@ function changeNet(){
 </div><!-- /page -->
 
 <!-- page2==================================================================================================================== -->
-<div data-role="page" data-theme="b" data-trancition="slide" id="p2">
+<div data-role="page" data-theme="b" data-trancition="slide" id="p2" data-close-btn="none">
 
 	<div data-role="header">
 		<h1>!!!</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-        	<h1>NO CONNECTION</h1>
+        	<h1>НЕТ СОЕДИНЕНИЯ</h1>
 	</div><!-- /content -->
 
 	<div data-role="footer">
