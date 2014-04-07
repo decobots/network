@@ -14,8 +14,8 @@ function init(){
      document.addEventListener("deviceready", onDeviceReady, false);
 }
 function onDeviceReady(){
-	document.getElementBuId("Net_type").innerHTML=connection.type;
-	alert(connection.type);
+	document.getElementBuId("Net_type").innerHTML=navigator.connection.type;
+	alert(navigator.connection.type);
     	document.addEventListener("online", onLine, false);
     	document.addEventListener("offline", offLine, false);
 }
