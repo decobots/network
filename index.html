@@ -32,7 +32,9 @@ function onLine(){
 function offLine(){
 	clearInterval(timer);
 	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p2", {role: "dialog"});
-	avigator.notification.vibrate(2500);
+	navigator.notification.vibrate(100);
+	navigator.notification.vibrate(500);
+	navigator.notification.vibrate(2500);
 	
 }
 function changeNet(){
