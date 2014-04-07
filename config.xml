@@ -16,6 +16,7 @@
     <author href="https://my.adress.com" email="support@hello.com">
         MGUP
     </author>
+        <gap:plugin name="org.apache.cordova.console" version="0.2.7" />
        <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
        <gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
     </widget>
