@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.phonegap.photo2"
+        id          = "com.phonegap.network"
         versionCode = "10" 
         version     = "1.0.0" >
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Photo2</name>
+    <name>Network</name>
 
     <description>
        Second app. 
@@ -16,7 +16,6 @@
     <author href="https://my.adress.com" email="support@hello.com">
         MGUP
     </author>
-        <gap:plugin name="org.apache.cordova.device" />
-    	<gap:plugin name="org.apache.cordova.camera" />
-
+       <gap:plugin name="org.apache.cordova.network-information" version="0.2.7" />
+       <gap:plugin name="org.apache.cordova.vibration" version="0.3.7" />
     </widget>
