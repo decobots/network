@@ -35,8 +35,11 @@ function offLine(){
 	
 }
 function changeNet(){
+	console.log("1");
 	if (net!=navigator.connection.type){
+			
 		net=navigator.connection.type;
+		console.log(net);
 		document.getElementById("Net_type").innerHTML=net;
 	}
 }
