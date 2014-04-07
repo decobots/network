@@ -15,6 +15,7 @@ function init(){
 }
 function onDeviceReady(){
 	document.getElementBuId("Net_type").innerHTML=connection.type;
+	alert(connection.type);
     	document.addEventListener("online", onLine, false);
     	document.addEventListener("offline", offLine, false);
 }
@@ -42,7 +43,6 @@ function offLine(){
 	</div><!-- /content -->
 
 	<div data-role="footer">
-		<button id="photoBut">Get photo</button>
 	</div><!-- /footer -->
 </div><!-- /page -->
 
