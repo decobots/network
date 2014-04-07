@@ -24,7 +24,7 @@ function onDeviceReady(){
     	document.addEventListener("offline", offLine, false);
 }
 function onLine(){
-	timer=setInterval("changeNet", 1000);
+	timer=setInterval(changeNet, 1000);
 	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p1");
 	
 	
