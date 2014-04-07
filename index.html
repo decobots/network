@@ -13,11 +13,11 @@
 function init(){
      document.addEventListener("deviceready", onDeviceReady, false);
 }
-function onDeviceReady(){	alert(navigator.connection.type);
-//	document.getElementBuId("Net_type").innerHTML=navigator.connection.type;
+function onDeviceReady(){//	alert(navigator.connection.type);
+	document.getElementById("Net_type").innerHTML=navigator.connection.type;
 
-    //	document.addEventListener("online", onLine, false);
-    //	document.addEventListener("offline", offLine, false);
+    	document.addEventListener("online", onLine, false);
+    	document.addEventListener("offline", offLine, false);
 }
 function onLine(){
 	
