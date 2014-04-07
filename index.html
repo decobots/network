@@ -14,27 +14,18 @@ function init(){
      document.addEventListener("deviceready", onDeviceReady, false);
 }
 function onDeviceReady(){
-	alert("hello");
-    	document.getElementById("photoBut").onclick=photo;
+	document.getElementBuId("Net_type").innerHTML=connection.type;
+    	document.addEventListener("online", onLine, false);
+    	document.addEventListener("offline", offLine, false);
 }
-function photo(){
-
-//	alert(navigator.camera.getPicture);
-
-//	navigator.camera.getPicture(cameraSuccess, cameraError);//, cameraOptions);
-	alert("platform"+device.platform+"!");
-//	alert(device.platform);
+function onLine(){
+	
+	
 }
-function cameraSuccess(imageData){
-	alert("ok");
-//	var image = document.getElementById('photoImg');
-//	image.src = "data:image/jpeg;base64," + imageData;
+function offLine(){
+	$( ":mobile-pagecontainer" ).pagecontainer( "change", "#p3");
+	
 }
-
-function cameraError(error){
-	allert(error);
-}
-
 </script>        
 </head>
 <body onload="init()">
@@ -46,7 +37,8 @@ function cameraError(error){
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
-        <img id="photoImg"></img>
+        	<p>Start here</p>
+        	<p id="Net_type"></p>
 	</div><!-- /content -->
 
 	<div data-role="footer">
@@ -54,8 +46,37 @@ function cameraError(error){
 	</div><!-- /footer -->
 </div><!-- /page -->
 
-<!-- page1==================================================================================================================== -->
-<!-- page1==================================================================================================================== -->
+<!-- page2==================================================================================================================== -->
+<div data-role="page" data-theme="a" id="p2">
+
+	<div data-role="header">
+		<h1>Photo</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        	<p>Your connection was change</p>
+        	<p id="Net_type"></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<button id="photoBut">Get photo</button>
+	</div><!-- /footer -->
+</div><!-- /page -->
+<!-- page3==================================================================================================================== -->
+<div data-role="page" data-theme="b" data-trancition="slide" id="p3">
+
+	<div data-role="header">
+		<h1>Photo</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+        	<h1>NO CONNECTION</h1>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<button id="photoBut">Get photo</button>
+	</div><!-- /footer -->
+</div><!-- /page -->
 <!-- page1==================================================================================================================== -->
 <!-- page1==================================================================================================================== -->
 <!-- page1==================================================================================================================== -->
